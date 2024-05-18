@@ -1,3 +1,5 @@
+compiled_adapters/*.txt
+
 # Logs
 logs
 *.log
