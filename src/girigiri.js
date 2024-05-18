@@ -54,7 +54,7 @@ export async function getSources(seriesId) {
 export function getConfig() {
   return JSON.stringify({
     name: 'Girigiri-js',
-    description: 'Girigiri适配器，但是js',
+    description: 'Girigiri适配器，但是js\n本源与Girigiri Love源完全相同，仅为演示JavaScript适配器之用途。',
   });
 }
 
