@@ -37,7 +37,7 @@ export async function getSources(seriesId) {
     }])
 }
 
-export async function play(episodeId) {
+export async function getVideoResource(episodeId) {
     return `https://www.libvio.pw${episodeId}`;
 }
 
