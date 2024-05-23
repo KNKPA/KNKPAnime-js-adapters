@@ -25,11 +25,11 @@ export async function getSources(seriesId) {
     const resp = await fetch(`https://www.libvio.pw${seriesId}`);
     const doc = parse(await resp.text());
     const ul = doc.querySelector('.stui-content__playlist');
-    const episodes = ul.querySelectorAll('li').map(li => {
+    const episodes = ul.querySelectorAll('li').map((li, idx) => {
         const a = li.querySelector('a');
         return {
             episodeId: a.attributes.href,
-            episode: ul.childNodes.indexOf(li),
+            episode: idx,
         };
     })
     return JSON.stringify([{
