@@ -63,3 +63,7 @@ class Config {
 ## Finally
 
 把你的适配器代码的url加到主程序里，看看能不能跑吧。
+
+## 已知问题
+
+根据[这个issue](https://github.com/abner/flutter_js/issues/80)描述，有时会出现fetch永远不resolve的情况。这个bug在[nyafun.js](./src/nyafun.js)中也有遇到。未来可能会考虑使用其他的js runtime，例如[Mercury](https://github.com/openwebf/mercury)。
