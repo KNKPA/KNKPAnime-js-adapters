@@ -1,6 +1,11 @@
 const parser = require('node-html-parser');
 const parse = parser.parse;
 
+/*
+When I tested this adapter, the fetch request in getSources hangs forever, thus making it unuseable.
+Similar issue can be found at https://github.com/abner/flutter_js/issues/80
+*/
+
 export async function search(keyword) {
     const resp = await fetch(`https://www.nyafun.net/search.html?wd=${keyword}`);
     const html = await resp.text();
